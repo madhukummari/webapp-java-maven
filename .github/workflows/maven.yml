@@ -31,7 +31,11 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Checking the folders
-      run: ls -lrta
+      run: |
+        ls -lrta
+        cd target
+        ls -lrta
+
 
     # # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     # - name: Update dependency graph
